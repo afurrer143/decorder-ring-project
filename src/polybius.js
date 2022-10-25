@@ -46,7 +46,7 @@ const polybiusModule = (function () {
     12: "f",
     22: "g",
     32: "h",
-    42: "i/j",
+    42: "(i/j)",
     52: "k",
     13: "l",
     23: "m",
@@ -68,18 +68,18 @@ const polybiusModule = (function () {
   function polybius(input = "", encode = true) {
     // your solution code here
 
-    input = input.toLowerCase();
+    input = input.toLowerCase(); //ignore any capital letters
     let inputArray = input.split(" "); //this turns each word in the message to an index in an array
-    console.log(inputArray); //)
+    //console.log(inputArray); // EX: ["hello", "world"] or ["2345", "23513434112251"]
     let result = "";
-    let codeTable = encoder
+    let codeTable = encoder //default codeTable will use encoder
     if (!encode) {
       //Aka we are decoding
       if (input.replace(/\s/g, '').length % 2 == 1) { 
         //This sees if a decoding message with no spaces at all is odd. If odd it returns false since that is not a proper formatted code to decode
         return false;
       }
-      codeTable = decoder;
+      codeTable = decoder; //sets the codeTable to use decoder instead
     }
     for (let i = 0; i < inputArray.length; i++) {
       //loops through each word in the array individually
@@ -89,7 +89,7 @@ const polybiusModule = (function () {
       // console.log(currentIndex)
       for (let j = 0; j < currentIndex.length; j++) {
         //Loops through each letter in a word
-        let currentLetter
+        let currentLetter //just declaring here so it can be used outside the if statement below's scope
         if (!encode) {
           currentLetter = currentIndex[j] + currentIndex[j + 1] //so when decoding we need two digits
           j++ //and we also need to add one to jindex (other wise first "letter" would be 21, then second "letter" would use that 1 in the first letter)
@@ -113,7 +113,7 @@ const polybiusModule = (function () {
       result += `${wordArray.join("")} `; //This simply takes the wordArray, flattenes it into a string and adds that to result (with a space at the end)
     }
     // console.log(`~~~~~~~~~~~~~~~~~~~result Array is~~~~~~~~~~~~~~~~~~~`);
-    // console.log(result);
+    console.log(result);
     return result.trim(); //removes spaces add end and front
 
     //when encode is false, aka DECODE

@@ -42,7 +42,7 @@ Node.js v12 or higher
 
 1. Clone this repository to your local machine.
 2. Install the required dependencies by running npm install in the root directory of the project.
-3. Start the application by running npm start. The application should now be accessible at http://localhost:3000.
+3. Start the application by running npm start. The application should now be accessible at http://127.0.0.1:8080/ (or what ever you have set Live Server to use for the port).
 
 ## Contributing
 

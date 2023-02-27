@@ -2,7 +2,11 @@
 
 ## By Andrew Furrer
 
-A project to encode and decode messages from user inputted messages from a varierty of encoding methods, and using the same methods to decode messages
+This program allows users to decode coded messages using a variety of different encoding methods. The program supports the following encoding methods:
+
++ Caesar cipher: a simple substitution cipher in which each letter in the plaintext is shifted a certain number of places down the alphabet.
++ Polybius square: a method of encoding pairs of letters as two-digit numbers using a 5x5 grid.
++ Substitution cipher: a more complex substitution cipher in which each letter in the plaintext is replaced with a different letter or symbol.
 
 With a heavy focus on Test Driven Development
 
@@ -29,3 +33,17 @@ Decoding taking the process and checking values and cross referencing with the p
 With a user inputted message, and a user inputted Substituion alphabet swapping letters based on the index real alphabet and using that info into the user inputted alphabet
 
 Decoding working in reverse, taking the index of letters in user inputted alphabet, and using its index in the actual alphabet
+
+## Requirements
+
+Node.js v12 or higher
+
+## Installation and Setup
+
+1. Clone this repository to your local machine.
+2. Install the required dependencies by running npm install in the root directory of the project.
+3. Start the application by running npm start. The application should now be accessible at http://localhost:3000.
+
+## Contributing
+
+If you would like to contribute to this project, please feel free to fork the repository and submit a pull request. All contributions are welcome!
